@@ -1,1 +1,1 @@
-9th-graders lessons, according to the national Romanian curriculum. 
+9th-graders mechanics lessons, according to the national Romanian curriculum. 
