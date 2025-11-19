@@ -1,1 +1,1 @@
-These are my 9th grade physics lessons, according to the national Romanian curriculum.
+Lecțiile de mecanică de clasa a 9-a, conform programei naționale din România
