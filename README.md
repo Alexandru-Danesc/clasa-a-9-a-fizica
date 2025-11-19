@@ -1,2 +1,1 @@
-#fizica #mecanica
-Mechanics 9th grade lessons, according to the national Romanian curriculum. 
+These are my 9th grade physics lessons, according to the national Romanian curriculum.
