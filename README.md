@@ -1,1 +1,1 @@
-Mecanică, clasa a IX-a, conform programei naționale din România. 
+mecanică, clasa a 9-a, conform programei naționale din România. 
