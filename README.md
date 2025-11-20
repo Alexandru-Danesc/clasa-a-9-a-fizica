@@ -1,1 +1,1 @@
-mecanică, clasa a 9-a, conform programei naționale din România. 
+Physics, mechanics, 9th-grade high-school lessons, according to Romanian national curriculum
