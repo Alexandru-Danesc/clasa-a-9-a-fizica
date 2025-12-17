@@ -4,68 +4,143 @@
   <meta charset="UTF-8" />
   <title>Mecanica (clasa a 9-a)</title>
   <style>
+  /* Base styles */
+  body {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 16px;
+    background: #f9f9f9;
+    color: #333;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.4rem;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 2.2rem;
+    margin-bottom: 0.8rem;
+    color: #444;
+    border-left: 5px solid #6c757d;
+    padding-left: 10px;
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  ul li {
+    margin: 14px 0;
+    padding-left: 22px;
+    position: relative;
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  ul li::before {
+    content: "•";
+    color: #6c757d;
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    font-weight: bold;
+  }
+
+  a {
+    display: inline-block;      /* better tap targets */
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+    padding: 4px 0;
+  }
+
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  .lesson-code,
+  .lesson-title {
+  display: inline;
+}
+
+  /* 📱 Mobile-specific adjustments */
+  @media (max-width: 600px) {
     body {
-      font-family: 'Georgia', serif;
-      font-size: 16px;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: #f9f9f9;
-      color: #333;
+      font-size: 15px;
+      padding: 0 14px;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.3rem;
-      font-weight: normal;
+      font-size: 1.9rem;
     }
-
+    
+    .underline {
+       margin-bottom: 1.2rem
+       padding-bottom: 0.8rem;
+       border-bottom: 0.6px solid #999; 
+       display: inline-block;
+    }
+    
     h2 {
-      font-size: 1.8rem;
-      margin-top: 2.5rem;
-      margin-bottom: 0.8rem;
-      color: #444;
-      border-left: 5px solid #6c757d;
-      padding-left: 10px;
-      font-weight: normal;
+      font-size: 1.6rem;
+      text-align: center;
+      border-left: none;      /* just in case */
+      padding-left: 0;
+      border-bottom: 2px solid #ccc; /* same as h1 underline */
+      padding-bottom: 0.4rem;
     }
 
-    ul {
-      list-style-type: none;
+    h1,
+    h2 {
+      text-align: center;  
+      border-left: none;
       padding-left: 0;
     }
-
-    ul li {
-      margin: 12px 0;
-      padding-left: 20px;
-      position: relative;
-      font-size: 1rem;
+    
+   ul li {
+      font-size: 0.95rem;
+      text-align: center;   /* center text on phone */
+      padding-left: 0;      /* remove left offset */
+    } 
+    
+   ul li::before {
+    display: none;        /* hide bullet on phone */
     }
-
-    ul li::before {
-      content: "•";
-      color: #6c757d;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      
+    ul li a {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr; /* left = codes, right = text */
+      column-gap: 0.75rem;
+      align-items: start;
+      text-align: left;
+    }
+  
+    .lesson-code {
       font-weight: bold;
+      text-align: right;
+      white-space: nowrap;
+      font-size: 1.2rem; 
     }
-
-    a {
-      text-decoration: none;
-      color: #007bff;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #0056b3;
-      text-decoration: underline;
-    }
-  </style>
+  
+    .lesson-title {
+      text-align: left;
+      font-size: 1.2rem;  
+  }
+}
+</style>
 </head>
 <body>
 
@@ -73,17 +148,52 @@
 
   <h2>Vectori</h2>
   <ul>
-    <li><a href="Lectia 1 - Vectori (Teorie).pdf" target="_blank">Lectia 1 - Vectori (Teorie)</a></li>
-    <li><a href="Lectia 1.1 - Vectori (Exercitii).pdf" target="_blank">Lectia 1.1 - Vectori (Exerciții)</a></li>
+
+        <li>
+            <a href="Lectia 1 - Vectori (Teorie).pdf" target="_blank">
+                <span class="lesson-code">Lectia 1</span>
+                <span class="lesson-title">Vectori (Teorie)</span>
+            </a>
+        </li>
+
+     <li>
+            <a href="Lectia 1.1 - Vectori (Exercitii).pdf" target="_blank">
+                <span class="lesson-code">Lectia 1.1</span>
+                <span class="lesson-title">Vectori (Exerciții)</span>
+            </a>
+        </li>
   </ul>
 
   <h2>Cinematică - <br>
     Mișcarea rectilinie și mișcarea circulară</h2>
   <ul>
-    <li><a href="Lectia 2 - Miscarea rectilinie uniforma, miscarea rectilinie uniform variata, miscarea circulara uniforma (Teorie).pdf" target="_blank">Lectia 2 - Mișcarea rectilinie uniformă, mișcarea rectilinie uniform variată, mișcarea circulară uniformă (Teorie)</a></li>
-    <li><a href="Lectia 2.1 Miscarea rectilinie uniforma (Exercitii).pdf" target="_blank">Lectia 2.1 - Mișcarea rectilinie uniformă (Exerciții)</a></li>
-    <li><a href="Lectia 2.2 - Miscarea rectilinie uniform variata (Exercitii).pdf" target="_blank">Lectia 2.2 - Mișcarea rectilinie uniform variată (Exerciții)</a></li>
-    <li><a href="Lectia 2.3 - Miscarea circulara uniforma (Exercitii).pdf" target="_blank">Lectia 2.3 - Mișcarea circulară uniformă (Exerciții)</a></li>
+
+         <li>
+            <a href="Lectia 2 - Miscarea rectilinie uniforma, miscarea rectilinie uniform variata, miscarea circulara uniforma (Teorie).pdf" target="_blank">
+                <span class="lesson-code">Lectia 2</span>
+                <span class="lesson-title">Mișcarea rectilinie uniformă, mișcarea rectilinie uniform variată, mișcarea circulară uniformă (Teorie)</span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="Lectia 2.1 Miscarea rectilinie uniforma (Exercitii).pdf" target="_blank">
+                <span class="lesson-code">Lectia 2.1</span>
+                <span class="lesson-title">Mișcarea rectilinie uniformă (Exerciții)</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="Lectia 2.2 - Miscarea rectilinie uniform variata (Exercitii).pdf" target="_blank">
+                <span class="lesson-code">Lectia 2.2</span>
+                <span class="lesson-title">Mișcarea rectilinie uniform variată (Exerciții)</span>
+            </a>
+        </li>
+      <li>
+            <a href="Lectia 2.3 - Miscarea circulara uniforma (Exercitii).pdf" target="_blank">
+                <span class="lesson-code">Lectia 2.3</span>
+                <span class="lesson-title">Mișcarea circulară uniformă (Exerciții)</span>
+            </a>
+        </li>
   </ul>
 
   <h2>Dinamică - <br>
