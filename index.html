@@ -15,8 +15,31 @@
     padding: 0 16px;
     background: #f9f9f9;
     color: #333;
-  }
 
+      /* Background image */
+  background-image: url("mechanics.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #2b2b2b;
+  }
+    
+.content-panel {
+  max-width: 760px;
+  margin: 0 auto;
+
+  background: rgba(250, 238, 210, 0.55);
+  backdrop-filter: blur(2px);
+
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+    
   h1 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
@@ -82,8 +105,17 @@
     body {
       font-size: 15px;
       padding: 0 14px;
+    background-image: url("mechanics.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed; 
     }
 
+    .content-panel {
+  background: rgba(250, 238, 210, 0.45);
+ }
+    
     h1 {
       font-size: 1.9rem;
     }
@@ -144,7 +176,7 @@
 </style>
 </head>
 <body>
-
+<div class="content-panel">
   <h1>Mecanică (clasa a 9-a)</h1>
 
   <h2>Vectori</h2>
@@ -281,6 +313,6 @@
             </a>
         </li>
   </ul>
-  
+  </div>
 </body>
 </html>
