@@ -30,7 +30,7 @@
   max-width: 760px;
   margin: 0 auto;
 
-  background: rgba(250, 238, 210, 0.55);
+  background: rgba(250, 238, 210, 0.65);
   backdrop-filter: blur(2px);
 
   max-width: 760px;
@@ -85,7 +85,8 @@
   a {
     display: inline-block;      /* better tap targets */
     text-decoration: none;
-    color: #007bff;
+    /*color: #007bff;*/
+    color: black;  
     transition: color 0.3s ease;
     padding: 4px 0;
   }
@@ -95,6 +96,11 @@
     text-decoration: underline;
   }
 
+     a:link, a:visited, a:hover, a:active {
+       color: black;
+       text-decoration: none;
+   }
+    
   .lesson-code,
   .lesson-title {
   display: inline;
@@ -105,7 +111,7 @@
     body {
       font-size: 15px;
       padding: 0 14px;
-    background-image: url("mechanics.png");
+    background-image: url("mechanics-mobile.png");
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center top;
@@ -113,7 +119,7 @@
     }
 
     .content-panel {
-  background: rgba(250, 238, 210, 0.45);
+  background: rgba(250, 238, 210, 0.65);
  }
     
     h1 {
